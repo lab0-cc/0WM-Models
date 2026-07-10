@@ -24,7 +24,7 @@ All the parts in this repository have been designed to be printed using a resin 
 
 The handle, phone mount and cover need to be printed with a resin able to sustain some deformation. We strongly discourage using a standard brittle resin for those parts, and rather suggest a so-called tough or ABS-like resin. We have had the most success with, and thus recommend Anycubic’s ABS-Like Resin Pro 2.
 
-We recommend a harder and less flexible (thus cheaper) resin for the AP mount, as it will be in large-tolerance (> 0.1 mm before resin shrinkage) contact with external parts and must not deform too much.
+The AP mount can be printed using a harder and less flexible (thus cheaper) resin, if needed.
 
 As with anything printed using a resin printer, care should be taken to properly clean, dry, and cure the parts, as errors (especially regarding duration) in these steps can greatly impact the final result.
 After tinkering a lot with printing parameters and slicers, we actually found that the default parameters of our machine manufacturer’s (Anycubic) slicer were ideal for this project. In this slicer, we used heavy supports, with a 3 mm lift between the model and the raft.
@@ -70,9 +70,25 @@ The movable holder is then inserted at the back of the mount.
 
 |Flavor|Compatibility|Path|Overview|
 |---|---|---|---|
+|[UniFi](#ap-mount-unifi)|UniFi UAP-AC-PRO|[`AP-Mount/UniFi.stl`](AP-Mount/UniFi.stl)|[<img src="images/AP-Mount-UniFi.png" alt="UniFi AP mount" height=200px/>](images/AP-Mount-UniFi.png)|
 |[Zyxel](#ap-mount-zyxel)|Zyxel NWA50AX|[`AP-Mount/Zyxel.stl`](AP-Mount/Zyxel.stl)|[<img src="images/AP-Mount-Zyxel.png" alt="Zyxel AP mount" height=200px/>](images/AP-Mount-Zyxel.png)|
 
 The AP mount is the interface between the phone mount and the AP. It is designed in a specific way depending on the AP, and thus cannot be made general-purpose.
+
+#### <a name="ap-mount-unifi"></a>UniFi
+
+We recommend to print the AP mount vertically, with its flat face closest to the build plate, to minimize warping and reduce the need for supports as much as possible. Here is our **recommendation**:
+
+[<img src="images/AP-Mount-UniFi-supported.png" alt="UniFi AP mount on the build plate" height=300px />](images/AP-Mount-UniFi-supported.png)
+
+The AP mount is assembled with the AP by rotating it in place in the AP’s dedicated wall-mount slot.
+
+<img src="images/AP-Mount-UniFi+AP.png" alt="AP mount and AP" height=300px />
+
+It is assembled with the phone mount by sliding its smooth side into the phone mount’s top slit. Sanding and repeated back-and-forth movements may be necessary before everything fits smoothly, which the tolerances we defined on those parts should easily allow.
+
+<img src="images/AP-Mount-UniFi+Phone-Mount.png" alt="AP mount and phone mount" height=300px />
+
 
 #### <a name="ap-mount-zyxel"></a>Zyxel
 
@@ -80,7 +96,7 @@ We recommend to print the AP mount vertically, with its two flat faces closest t
 
 [<img src="images/AP-Mount-Zyxel-supported.png" alt="Zyxel AP mount on the build plate" height=300px />](images/AP-Mount-Zyxel-supported.png)
 
-The AP mount is assembled with the AP by locking it in place in the AP’s dedicated wall-mount slot. The overall locking is a bit loose, hence the need for a non-flexible resin.
+The AP mount is assembled with the AP by sliding it in place in the AP’s dedicated wall-mount slot.
 
 <img src="images/AP-Mount-Zyxel+AP.png" alt="AP mount and AP" height=300px />
 
@@ -92,7 +108,9 @@ It is assembled with the phone mount by sliding its smooth side into the phone m
 
 |Flavor|Compatibility|Path|Overview|
 |---|---|---|---|
-|[Ubiquiti](#cover-ubiquiti)|Ubiquiti POE-48-24W-G-WH|[`Cover/Ubiquiti.stl`](Cover/Ubiquiti.stl)|[<img src="images/Cover-Ubiquiti.png" alt="Ubiquiti cover" height=200px/>](images/Cover-Ubiquiti.png)|
+|[Ubiquiti 15W](#cover-ubiquiti)|Ubiquiti U-POE-af|[`Cover/Ubiquiti-15W.stl`](Cover/Ubiquiti-15W.stl)|[<img src="images/Cover-Ubiquiti-15W.png" alt="Ubiquiti cover" height=200px/>](images/Cover-Ubiquiti-15W.png)|
+|[Ubiquiti 24W black](#cover-ubiquiti)|Ubiquiti POE-48-24W-G|[`Cover/Ubiquiti-24W-Black.stl`](Cover/Ubiquiti-24W-Black.stl)|[<img src="images/Cover-Ubiquiti-24W-Black.png" alt="Ubiquiti cover" height=200px/>](images/Cover-Ubiquiti-24W-Black.png)|
+|[Ubiquiti 24W white](#cover-ubiquiti)|Ubiquiti POE-48-24W-G-WH|[`Cover/Ubiquiti-24W-White.stl`](Cover/Ubiquiti-24W-White.stl)|[<img src="images/Cover-Ubiquiti-24W-White.png" alt="Ubiquiti cover" height=200px/>](images/Cover-Ubiquiti-24W-White.png)|
 
 The last part of the 0WM scanner, and perhaps the strangest one, is its cover. It is used to mount anything power-related, such as PoE injectors or batteries. As with the [AP mount](#ap-mount), its design is hardware-specific, and thus cannot be made general-purpose.
 
